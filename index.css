@@ -14,14 +14,12 @@
 {
     flex: 1;
     display: flex;
-  
 }
 #key
 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    
 }
 #keyNumber
 {
@@ -30,7 +28,6 @@
 }
 .number
 {
-
     text-decoration: none;
     cursor: pointer;
     padding: 0.5rem;
@@ -38,12 +35,20 @@
     color: #ffffff;
     background-color: #1883ba;
     border: 0.1rem solid #0016b0;
-
+}
+.resize
+{
+    height: 100%;
+    width: 10%;
+    background-color: #fff;
+    position: fixed!important;
+    z-index: 1;
+    overflow: auto
 }
 /*SECUNDA VENTANA*/
 #second
 {
-    flex: 8;
+    width: 90%;
 }
 #second h1
 {
@@ -52,6 +57,8 @@
 }
 #encrypt
 {
+    width: 100%;
+    background: yellow;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -62,7 +69,11 @@
     background: gray;
     display: flex;
     flex-direction: column;
-
+}
+#secondBody p
+{
+    text-align: center;
+    margin: 2rem 0.1rem;
 }
 #text
 {
@@ -71,6 +82,7 @@
     max-width: 90%;
     min-height: 15rem;
     max-height: 15rem;
+    resize: none; /*MIERDA AL FIN LO LOGREE!!!!*/
 }
 #button
 {
@@ -78,5 +90,18 @@
     justify-content: space-around;
     background: rebeccapurple;
 }
+.button
+{
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #1883ba;
+    border: 0.1rem solid #0016b0;
+}
+
+
 
 
