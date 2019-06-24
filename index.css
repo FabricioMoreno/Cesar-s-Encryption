@@ -1,0 +1,82 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+#padre
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+/*PRIMERA VENTANA*/
+#first
+{
+    flex: 1;
+    display: flex;
+  
+}
+#key
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+#keyNumber
+{
+    display: flex;
+    flex-direction: column;
+}
+.number
+{
+
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #1883ba;
+    border: 0.1rem solid #0016b0;
+
+}
+/*SECUNDA VENTANA*/
+#second
+{
+    flex: 8;
+}
+#second h1
+{
+    text-align: center;
+    background: yellow;
+}
+#encrypt
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+/*Cuerpo de la segunda ventana*/
+#secondBody
+{
+    background: gray;
+    display: flex;
+    flex-direction: column;
+
+}
+#text
+{
+    margin: 3rem auto 0 auto;
+    min-width: 90%;
+    max-width: 90%;
+    min-height: 15rem;
+    max-height: 15rem;
+}
+#button
+{
+    display: flex;
+    justify-content: space-around;
+    background: rebeccapurple;
+}
+
+
