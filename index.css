@@ -2,6 +2,7 @@
 {
     margin: 0;
     padding: 0;
+    background: rgb(200, 224, 198);
 }
 #padre
 {
@@ -21,10 +22,25 @@
     display: flex;
     flex-direction: column;
 }
+#keyNumber h1
+{
+    background-color: #085347;
+    color: #ffffff;
+    padding: 0.7rem 0;
+    text-align: center;
+    box-sizing: border-box;
+    border: 0.1rem solid rgb(13, 66, 6);
+}
+#keyNumber button
+{
+    padding: 0.7rem 0;
+    font-size: 1.2rem;
+}
 #keyNumber
 {
     display: flex;
     flex-direction: column;
+    font-family: 'Teko', sans-serif;
 }
 .number
 {
@@ -33,8 +49,8 @@
     padding: 0.5rem;
     font-size: 1rem;
     color: #ffffff;
-    background-color: #1883ba;
-    border: 0.1rem solid #0016b0;
+    background: rgb(105, 151, 111);
+    border: 0.1rem solid #012415;
 }
 .resize
 {
@@ -52,28 +68,46 @@
 }
 #second h1
 {
+    background: rgb(139, 161, 137);
     text-align: center;
-    background: yellow;
+    margin: 5rem;
+    font-family: 'Anton', sans-serif;
+    font-size: 6rem;
+    color: rgb(188, 243, 184);
+    font-weight: bold;
 }
 #encrypt
 {
+    background: rgb(139, 161, 137);
     width: 100%;
-    background: yellow;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
 }
 /*Cuerpo de la segunda ventana*/
 #secondBody
 {
-    background: gray;
+    background:rgb(240, 236, 236);
     display: flex;
     flex-direction: column;
 }
+#secondBody #text
+{
+    margin-top: 4rem;
+    border: 0.25rem solid rgb(13, 66, 6);
+    font-size: 1.4rem;
+    font-family: 'Source Code Pro', monospace;
+    background: #ffffff;
+}
 #secondBody p
 {
+    background: rgb(212, 230, 214);
     text-align: center;
-    margin: 2rem 0.1rem;
+    margin: 2.5rem 0.1rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-top: 0.5rem  solid rgb(192, 219, 185);
+    border-bottom: 0.5rem  solid rgb(192, 219, 185);
 }
 #text
 {
@@ -98,10 +132,9 @@
     padding: 0.5rem;
     font-size: 1rem;
     color: #ffffff;
-    background-color: #1883ba;
-    border: 0.1rem solid #0016b0;
+    background-color: rgb(105, 180, 99);
+    border: 0.12rem solid #053a19;
+    font-family: 'Cutive Mono', monospace;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
-
-
-
-
