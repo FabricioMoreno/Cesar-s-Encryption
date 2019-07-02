@@ -114,6 +114,7 @@
     min-height: 15rem;
     max-height: 15rem;
     resize: none; /*MIERDA AL FIN LO LOGREE!!!!*/
+    padding: 0.5rem;
 }
 #button
 {
@@ -149,6 +150,7 @@
     min-height: 15rem;
     max-height: 15rem;
     resize: none; 
+    padding: 0.5rem;
 }
 
 .errorKey{
