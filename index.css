@@ -72,27 +72,11 @@
 {
     width: 90%;
 }
-#headerTwo{
-    background: rgb(139, 161, 137);
-    display: flex;
-    flex-direction: column-reverse;
-}
-#headerTwo p{
-    background: rgb(139, 161, 137);
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 1.4rem;
-    color: rgb(245, 241, 241);
-    margin-right: 0.3rem;
-    margin-top: 0.3rem;
-    font-family: 'Cinzel', serif;
-}
 #second h1
 {
     background: rgb(139, 161, 137);
     text-align: center;
     margin: 5rem;
-    margin-top: 3.5rem;
     font-family: 'Anton', sans-serif;
     font-size: 6rem;
     color: rgb(188, 243, 184);
