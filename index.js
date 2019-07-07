@@ -45,7 +45,7 @@ function array(withoutSpace){
 function sort(num){
     var letra = String.fromCharCode(241);
     var keycopy = num;
-    var array = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",letra,"o","p","q","r","s","u","v","w","x","y","z"];
+    var array = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",letra,"o","p","q","r","s","t","u","v","w","x","y","z"];
     var a=[];
     var n=0;
     for(i=0;i<array.length;i++){
@@ -60,7 +60,6 @@ function sort(num){
     }
     return a;
 }
-/*Retorna el valor encryptado*/ //-----------no se pueden ingresar numeros--------
 function encrypt(arrayText,textCompare){
     var letra = String.fromCharCode(241);
     var newArray = []
@@ -150,12 +149,131 @@ function encrypt(arrayText,textCompare){
             case "":
                 newArray[i] = "";
                 break;
+            default:
+                newArray[i] = arrayText[i];
+                break;
         }
     }
     return newArray;
 }
-function translate(num,txt){
-    alert("transalte"+txt+num);
+function takePosition(letter,text){
+    var arrayLetter;
+    var letra = String.fromCharCode(241);
+    var array = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",letra,"o","p","q","r","s","t","u","v","w","x","y","z"];
+    for(i=0;i<array.length;i++){
+        if(text[i] == letter){
+            arrayLetter = array[i];
+        }
+    }
+    return arrayLetter;
+}
+function translate(arrayText,textCompare){
+    var letra = String.fromCharCode(241);
+    var newArray = []
+    for(var i=0;i<arrayText.length;i++){
+        switch(arrayText[i]){
+            case "a":
+                newArray[i] = takePosition("a",textCompare);
+                break;
+            case "b":
+                newArray[i] = takePosition("b",textCompare);
+                break;
+            case "c":
+                newArray[i] = takePosition("c",textCompare);
+                break;
+            case "d":
+                newArray[i] = takePosition("d",textCompare);
+                break;
+            case "e":
+                newArray[i] = takePosition("e",textCompare);
+                break;
+            case "f":
+                newArray[i] = takePosition("f",textCompare);
+                break;
+            case "g":
+                newArray[i] = takePosition("g",textCompare);
+                break;
+            case "h":
+                newArray[i] = takePosition("h",textCompare);
+                break;
+            case "i":
+                newArray[i] = takePosition("i",textCompare);
+                break;
+            case "j":
+                newArray[i] = takePosition("j",textCompare);
+                break;
+            case "k":
+                newArray[i] = takePosition("k",textCompare);
+                break;
+            case "l":
+                newArray[i] = takePosition("l",textCompare);
+                break;
+            case "m":
+                newArray[i] = takePosition("m",textCompare);
+                break;
+            case "n":
+                newArray[i] = takePosition("n",textCompare);
+                break;
+            case letra:
+                newArray[i] = takePosition(letra,textCompare);
+                break;
+            case "o":
+                newArray[i] = takePosition("o",textCompare);
+                break;
+            case "p":
+                newArray[i] = takePosition("p",textCompare);
+                break;
+            case "q":
+                newArray[i] = takePosition("q",textCompare);
+                break;
+            case "r":
+                newArray[i] = takePosition("r",textCompare);
+                break;
+            case "s":
+                newArray[i] = takePosition("s",textCompare);
+                break;
+            case "t":
+                newArray[i] = takePosition("t",textCompare);
+                break;
+            case "u":
+                newArray[i] = takePosition("u",textCompare);
+                break;
+            case "v":
+                newArray[i] = takePosition("v",textCompare);
+                break;
+            case "w":
+                newArray[i] = takePosition("w",textCompare);
+                break;
+            case "x":
+                newArray[i] = takePosition("x",textCompare);
+                break;
+            case "y":
+                newArray[i] = takePosition("y",textCompare);
+                break;
+            case "z":
+                newArray[i] = takePosition("z",textCompare);
+                break;
+            case "":
+                newArray[i] = "";
+                break;
+            default:
+                newArray[i] = arrayText[i];
+                break;
+           
+        }
+    }
+    return newArray;
+}
+/*-------------------TRANSLATE-------------------*/
+function translateAll(num,txt){
+    var minText = lowerText(txt);
+    var withoutTildes = deleteTildes(minText);
+    var withoutSpace = deleteSpace(withoutTildes);
+    var arrayText = array(withoutSpace);
+    var textCompare = sort(num);
+    var textEncrypted = translate(arrayText,textCompare);
+    var stringTextEncrypted = textEncrypted.toString().replace(/,/g,"");
+    return stringTextEncrypted;
 }
 /*-------------------ENCRIPTAR-------------------*/
 function encryptAll(num,txt){
@@ -165,7 +283,8 @@ function encryptAll(num,txt){
     var arrayText = array(withoutSpace);
     var textCompare = sort(num);
     var textEncrypted = encrypt(arrayText,textCompare);
-    console.log(textEncrypted);
+    var stringTextEncrypted = textEncrypted.toString().replace(/,/g,"");
+    return stringTextEncrypted;
 }
 function comprobarCampos(num,txt){
     var setClass = document.getElementById("text");
@@ -189,16 +308,38 @@ function comprobarCampos(num,txt){
         return true;
     }
 }
+function deleteText(){
+    var padre = document.getElementById("encrypt");
+    var hijo = document.getElementsByClassName("eliminar");
+    for(var i=0;i<hijo.length;i++){
+        padre.removeChild(hijo[i]);
+    }
+}
+function insertText(textEncrypt){
+    var newDiv = document.createElement("div");
+    var newP = document.createElement("p");
+    var newContent = document.createTextNode(textEncrypt);
+    newP.appendChild(newContent);
+    newDiv.appendChild(newP);
+    var after = document.getElementById("encrypt");
+    newDiv.setAttribute("class","divSpecial eliminar");
+    newP.setAttribute("class","pSpecial");
+
+    after.appendChild(newDiv);
+}
 function comprobarBtn(){
     var txt = document.getElementById("text").value;
+    deleteText();
     if(this.innerHTML == "Encrypt"){
         if(comprobarCampos(num,txt)==true){
-            encryptAll(num,txt);
+            var textEncrypt = encryptAll(num,txt);
+            insertText(textEncrypt);
         }
     }
     else{
         if(comprobarCampos(num,txt)==true){
-            translate(num,txt);
+            var textTranslate=translateAll(num,txt);
+            insertText(textTranslate);
         }
     }
 }
@@ -209,11 +350,3 @@ function btnListener(){
 }
 
 btnListener();
-
-/*function encrypt(){
-    if(btnEncrypt == ){
-        alert("soy encrypt");
-    }
-    else{
-        alert("soy translate");
-    }*/
