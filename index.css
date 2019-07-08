@@ -59,6 +59,7 @@
 }
 .resize
 {
+    box-sizing: border-box;
     height: 100%;
     width: 10%;
     background-color: #fff;
@@ -146,7 +147,8 @@
     flex: 1;
     display: flex;
     justify-content: space-around;
-    background: rebeccapurple;
+    padding-bottom: 1rem;
+    background:rgb(240, 236, 236);
 }
 .button
 {
@@ -170,6 +172,9 @@
     }
     #second h1{
         font-size: 3.1rem;
+    }
+    #button{
+        padding: 0 0.3rem;
     }
  }
 
