@@ -149,6 +149,9 @@ function encrypt(arrayText,textCompare){
             case "":
                 newArray[i] = "";
                 break;
+            case ",":
+                newArray[i] = "c7om'8mA9";
+                break;
             default:
                 newArray[i] = arrayText[i];
                 break;
@@ -256,6 +259,9 @@ function translate(arrayText,textCompare){
             case "":
                 newArray[i] = "";
                 break;
+            case ",":
+                newArray[i] = "c7om'8mA9";
+                break;
             default:
                 newArray[i] = arrayText[i];
                 break;
@@ -273,7 +279,8 @@ function translateAll(num,txt){
     var textCompare = sort(num);
     var textEncrypted = translate(arrayText,textCompare);
     var stringTextEncrypted = textEncrypted.toString().replace(/,/g,"");
-    return stringTextEncrypted;
+    var stringTextEncryptedComma = stringTextEncrypted.replace(/c7om'8mA9/gi,",");
+    return stringTextEncryptedComma;
 }
 /*-------------------ENCRIPTAR-------------------*/
 function encryptAll(num,txt){
@@ -284,7 +291,8 @@ function encryptAll(num,txt){
     var textCompare = sort(num);
     var textEncrypted = encrypt(arrayText,textCompare);
     var stringTextEncrypted = textEncrypted.toString().replace(/,/g,"");
-    return stringTextEncrypted;
+    var stringTextEncryptedComma = stringTextEncrypted.replace(/c7om'8mA9/gi,",");
+    return stringTextEncryptedComma;
 }
 function comprobarCampos(num,txt){
     var setClass = document.getElementById("text");
