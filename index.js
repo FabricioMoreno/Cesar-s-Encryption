@@ -331,6 +331,7 @@ function insertText(textEncrypt){
     newDiv.appendChild(newP);
     var after = document.getElementById("encrypt");
     newDiv.setAttribute("class","divSpecial eliminar");
+    newDiv.setAttribute("id","result")
     newP.setAttribute("class","pSpecial");
 
     after.appendChild(newDiv);
@@ -349,6 +350,11 @@ function comprobarBtn(){
             var textTranslate=translateAll(num,txt);
             insertText(textTranslate);
         }
+    }
+
+    if(!!document.getElementById("result")){
+        const textAreaResult = document.getElementById("result")
+        textAreaResult.scrollIntoView()
     }
 }
 function btnListener(){
