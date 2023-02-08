@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     background: rgb(200, 224, 198);
+    box-sizing: border-box;
 }
 #padre
 {
@@ -176,6 +177,9 @@
     #button{
         padding: 0 0.3rem;
     }
+    #button{
+        padding-bottom: 15px;
+    }
  }
 
 /*-----------JS-----------*/
@@ -196,7 +200,7 @@
 
 .errorKey{
     display: block;
-    width: 100%;
+    align-self: stretch;
     background: #9dd6b3;
 }
 .pSpecial
